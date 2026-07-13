@@ -1,0 +1,558 @@
+/*CSS PARA LA CARTELERA*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #121212;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    max-width: 375px;
+    margin: 0 auto;
+    padding-bottom: 70px;
+}
+
+.navegacion-superior {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    border-bottom: 1px solid #333;
+}
+
+.boton-atras {
+    background: none;
+    border: none;
+    color: #ff5252;
+    font-size: 20px;
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+.navegacion-superior h1 {
+    font-size: 14px;
+    color: #ff5252;
+    letter-spacing: 1px;
+}
+
+.seccion-buscador {
+    padding: 15px;
+}
+
+#entrada-buscador {
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #555;
+    color: #fff;
+    padding: 10px 5px;
+    font-size: 14px;
+}
+
+#entrada-buscador:focus {
+    outline: none;
+    border-bottom: 1px solid #ff5252;
+}
+
+.cartelera-cuadricula {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 15px;
+}
+
+.tarjeta-pelicula {
+    background-color: #1e1e1e;
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.imagen-pelicula {
+    width: 100%;
+    height: 400px;
+    background-color: #333;
+    object-fit: cover;
+}
+
+.info-pelicula {
+    padding: 10px;
+}
+
+.titulo-pelicula {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.detalles-pelicula {
+    font-size: 12px;
+    color: #ff5252;
+}
+
+.navegacion-inferior {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    max-width: 375px;
+    background-color: #1a1a1a;
+    border-top: 1px solid #333;
+}
+
+.navegacion-inferior nav {
+    display: flex;
+    justify-content: space-around;
+    padding: 15px 0;
+}
+
+.navegacion-inferior a {
+    color: #888;
+    text-decoration: none;
+    font-size: 12px;
+}
+
+.navegacion-inferior a.activo {
+    color: #ff5252;
+}
+
+
+
+
+
+/*CSS FUNCIONES*/
+
+.detalles-pelicula-vista {
+    padding: 15px;
+}
+
+.imagen-detalle {
+    width: 100%;
+    max-height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.sinopsis {
+    font-size: 13px;
+    color: #bbb;
+    margin-top: 10px;
+    line-height: 1.5;
+}
+
+.seccion-horarios {
+    padding: 15px;
+    border-top: 1px solid #333;
+}
+
+.titulo-seccion {
+    font-size: 12px;
+    color: #ffbba6;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+.cuadricula-horarios {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.boton-hora {
+    background-color: #1a1a1a;
+    border: 1px solid #333;
+    color: #fff;
+    padding: 15px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.boton-hora.seleccionado {
+    background-color: #ffbba6;
+    color: #121212;
+}
+
+.seccion-continuar {
+    padding: 15px;
+    margin-bottom: 40px;
+}
+
+.boton-rojo-gigante {
+    width: 100%;
+    background-color: #ff3333;
+    color: white;
+    border: none;
+    padding: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.boton-rojo-gigante:disabled {
+    background-color: #333;
+    color: #666;
+    cursor: not-allowed;
+}
+
+.seccion-fechas {
+    padding: 15px;
+    border-top: 1px solid #333;
+}
+
+.fila-fecha {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 0;
+    border-bottom: 1px solid #222;
+    color: #fff;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.fila-fecha.seleccionado {
+    color: #ffbba6;
+}
+
+.icono-check {
+    display: none;
+}
+
+.fila-fecha.seleccionado .icono-check {
+    display: inline;
+}
+
+
+
+
+/*CSS ASIENTOS*/
+.leyenda-asientos {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px 10px;
+    font-size: 10px;
+    color: #888;
+    border-bottom: 1px solid #333;
+}
+
+.item-leyenda {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.cuadro {
+    width: 15px;
+    height: 15px;
+    border-radius: 3px;
+}
+
+.sala-cine {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 100px;
+}
+
+.pantalla {
+    width: 100%;
+    text-align: center;
+    font-size: 10px;
+    color: #666;
+    letter-spacing: 3px;
+    border-top: 2px solid #555;
+    padding-top: 10px;
+    margin-bottom: 30px;
+}
+
+.fila-asientos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 12px;
+    gap: 8px;
+}
+
+.letra-fila {
+    font-size: 10px;
+    color: #888;
+    margin-right: 10px;
+    width: 10px;
+}
+
+.asiento {
+    width: 22px;
+    height: 22px;
+    border: 1px solid #ffbba6;
+    border-radius: 3px;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+.asiento:nth-of-type(4) {
+    margin-right: 25px;
+}
+
+.asiento.ocupado {
+    background-color: #333;
+    border-color: #333;
+    cursor: not-allowed;
+}
+
+.asiento.seleccionado {
+    background-color: #ff3333;
+    border-color: #ff3333;
+}
+
+.cuadro.disponible {
+    border: 1px solid #ffbba6;
+}
+
+.cuadro.ocupado {
+    background-color: #333;
+    border: 1px solid #333;
+}
+
+.cuadro.seleccionado {
+    background-color: #ff3333;
+}
+
+.resumen-pago {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    max-width: 375px;
+    background-color: #1a1a1a;
+    border-top: 1px solid #333;
+    padding: 15px;
+}
+
+.info-resumen h3 {
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.info-resumen p {
+    font-size: 10px;
+    color: #aaa;
+    margin-bottom: 15px;
+}
+
+.caja-pago {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.total-texto p {
+    font-size: 10px;
+    color: #888;
+}
+
+.total-texto h2 {
+    color: #ffbba6;
+    font-size: 18px;
+}
+
+.boton-rojo-pago {
+    background-color: #5d2525;
+    color: #aaa;
+    border: none;
+    padding: 15px 20px;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: not-allowed;
+}
+
+.boton-rojo-pago.activo {
+    background-color: #ff3333;
+    color: white;
+    cursor: pointer;
+}
+
+
+
+
+
+/*CSS PAGO*/
+.contenedor-pago {
+    padding: 20px;
+}
+
+.titulo-rojo {
+    font-size: 12px;
+    color: #ffbba6;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+    margin-top: 10px;
+}
+
+.caja-resumen {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #333;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+}
+
+.texto-salmon {
+    color: #ffbba6;
+}
+
+.detalles-resumen p {
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    color: #888;
+    margin-bottom: 10px;
+}
+
+.detalles-resumen span {
+    color: #fff;
+}
+
+.grupo-input {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+.grupo-input label {
+    font-size: 10px;
+    color: #888;
+    margin-bottom: 5px;
+    letter-spacing: 1px;
+}
+
+.grupo-input input {
+    background-color: #1a1a1a;
+    border: 1px solid #333;
+    color: #fff;
+    padding: 12px;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.grupo-input input:focus {
+    outline: none;
+    border-color: #ffbba6;
+}
+
+.fila-inputs {
+    display: flex;
+    gap: 15px;
+}
+
+.mitad {
+    width: 50%;
+}
+
+.terminos {
+    font-size: 10px;
+    color: #666;
+    text-align: center;
+    margin-top: 20px;
+    line-height: 1.5;
+}
+
+/*CSS ENTRADA*/
+
+.contenedor-entrada {
+    padding: 20px;
+    text-align: center;
+}
+
+.seccion-exito {
+    margin-bottom: 30px;
+}
+
+.icono-exito {
+    width: 60px;
+    height: 60px;
+    border: 2px solid #ffbba6;
+    border-radius: 50%;
+    line-height: 56px;
+    font-size: 30px;
+    color: #ffbba6;
+    margin: 0 auto 15px auto;
+}
+
+.titulo-exito {
+    font-size: 24px;
+    letter-spacing: 4px;
+    color: #ffbba6;
+    margin-bottom: 5px;
+}
+
+#mensaje-gracias {
+    font-size: 12px;
+    color: #bbb;
+}
+
+.ticket-virtual {
+    background-color: #1a1a1a;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 30px;
+    border: 1px solid #333;
+}
+
+.fila-ticket {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.fila-ticket:last-child {
+    margin-bottom: 0;
+}
+
+.etiqueta-ticket {
+    font-size: 10px;
+    color: #888;
+    letter-spacing: 1px;
+}
+
+.valor-ticket {
+    font-size: 14px;
+    color: #fff;
+    font-weight: bold;
+}
+
+.seccion-qr {
+    margin-bottom: 30px;
+}
+
+.caja-qr {
+    background-color: #fff;
+    padding: 10px;
+    display: inline-block;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.orden-texto {
+    font-size: 10px;
+    color: #888;
+}
+
+.botones-finales {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.boton-secundario {
+    background-color: #ff5252;
+}
+
+.boton-transparente {
+    background-color: transparent;
+    border: 1px solid #ff5252;
+    color: #ff5252;
+}
