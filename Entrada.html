@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tu Entrada</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <header class="navegacion-superior">
+        <button class="boton-atras" onclick="volverInicio()">←</button>
+        <h1>TU ENTRADA</h1>
+    </header>
+
+    <main class="contenedor-entrada">
+
+        <section class="seccion-exito">
+            <div class="icono-exito">✓</div>
+            <h1 class="titulo-exito">ÉXITO</h1>
+            <p id="mensaje-gracias">¡Gracias por tu compra, Nombre!</p>
+        </section>
+
+        <section class="ticket-virtual">
+            <div class="fila-ticket">
+                <span class="etiqueta-ticket">PELÍCULA</span>
+                <span class="valor-ticket" id="ticket-titulo">...</span>
+            </div>
+            <div class="fila-ticket">
+                <span class="etiqueta-ticket">FECHA</span>
+                <span class="valor-ticket" id="ticket-fecha">...</span>
+            </div>
+            <div class="fila-ticket">
+                <span class="etiqueta-ticket">HORA</span>
+                <span class="valor-ticket" id="ticket-hora">...</span>
+            </div>
+            <div class="fila-ticket">
+                <span class="etiqueta-ticket">SALA</span>
+                <span class="valor-ticket">SALA 04</span>
+            </div>
+            <div class="fila-ticket">
+                <span class="etiqueta-ticket">ASIENTOS</span>
+                <span class="valor-ticket texto-salmon" id="ticket-asientos">...</span>
+            </div>
+        </section>
+
+        <section class="seccion-qr">
+            <div class="caja-qr">
+                <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=EntradaCine" alt="Código QR">
+            </div>
+            <p class="orden-texto">ORDEN #8849-201-94</p>
+        </section>
+
+        <section class="botones-finales">
+            <button class="boton-rojo-gigante boton-secundario">
+                DESCARGAR ENTRADA
+            </button>
+            <button class="boton-rojo-gigante boton-transparente" onclick="volverInicio()">
+                VOLVER AL INICIO
+            </button>
+        </section>
+
+    </main>
+
+    <script src="js/entrada.js"></script>
+</body>
+
+</html>
