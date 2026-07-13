@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selección de Asientos</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <header class="navegacion-superior">
+        <button class="boton-atras" onclick="history.back()">←</button>
+        <h1>SELECCIONAR ASIENTOS</h1>
+    </header>
+
+    <section class="leyenda-asientos">
+        <div class="item-leyenda">
+            <div class="cuadro disponible"></div> DISPONIBLE
+        </div>
+        <div class="item-leyenda">
+            <div class="cuadro seleccionado"></div> SELECCIONADO
+        </div>
+        <div class="item-leyenda">
+            <div class="cuadro ocupado"></div> OCUPADO
+        </div>
+    </section>
+
+    <main class="sala-cine">
+        <div class="pantalla">LA PANTALLA</div>
+        <div id="contenedor-asientos" class="contenedor-asientos"></div>
+    </main>
+
+    <footer class="resumen-pago">
+        <div class="info-resumen">
+            <h3 id="resumen-titulo">Cargando...</h3>
+            <p id="resumen-detalles">Cargando...</p>
+        </div>
+
+        <div class="caja-pago">
+            <div class="total-texto">
+                <p>PRECIO TOTAL</p>
+                <h2 id="precio-total">$0.00</h2>
+            </div>
+            <button id="boton-pagar" class="boton-rojo-pago" disabled>
+                CONTINUAR AL PAGO
+            </button>
+        </div>
+    </footer>
+
+    <script src="js/asientos.js"></script>
+</body>
+
+</html>
