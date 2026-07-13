@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funciones de Película</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <header class="navegacion-superior">
+        <button class="boton-atras" onclick="history.back()">←</button>
+        <h1>NOW PLAYING</h1>
+    </header>
+
+    <main id="contenedor-detalles" class="detalles-pelicula-vista">
+    </main>
+
+    <section class="seccion-fechas">
+        <h3 class="titulo-seccion">SELECCIONAR FECHA</h3>
+        <div id="contenedor-fechas" class="lista-fechas">
+        </div>
+    </section>
+
+    <section class="seccion-horarios">
+        <h3 class="titulo-seccion">SELECCIONAR HORA</h3>
+        <div id="contenedor-horarios" class="cuadricula-horarios">
+        </div>
+    </section>
+
+    <section class="seccion-continuar">
+        <button id="boton-seleccionar-asientos" class="boton-rojo-gigante" disabled>
+            SELECCIONAR ASIENTOS
+        </button>
+    </section>
+
+    <script src="js/funciones.js"></script>
+</body>
+
+</html>
