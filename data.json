@@ -1,0 +1,46 @@
+{
+    "peliculas": [
+        {
+            "id": 1,
+            "titulo": "The Silent Axis",
+            "genero": "SCI-FI / DRAMA",
+            "año": "2024",
+            "duracion": "124 MIN",
+            "sinopsis": "En una ciudad construida en silencio, una frecuencia lo cambia todo...",
+            "imagen": "assets/silent_axis.jpg",
+            "fechas": [
+                "OCT 24 / HOY",
+                "OCT 25 / VIERNES",
+                "OCT 26 / SÁBADO",
+                "OCT 27 / DOMINGO"
+            ],
+            "horarios": [
+                "14:20",
+                "17:45",
+                "19:30",
+                "21:15"
+            ]
+        },
+        {
+            "id": 2,
+            "titulo": "Void Obscura",
+            "genero": "THRILLER",
+            "año": "2024",
+            "duracion": "110 MIN",
+            "sinopsis": "Un detective cibernético descubre una conspiración en el bajo mundo...",
+            "imagen": "assets/void_obscura.jpg",
+            "fechas": [
+                "OCT 24 / HOY",
+                "OCT 25 / VIERNES",
+                "OCT 26 / SÁBADO",
+                "OCT 27 / DOMINGO"
+            ],
+            "horarios": [
+                "15:00",
+                "18:30",
+                "20:00",
+                "22:45"
+            ]
+        }
+    ]
+}
