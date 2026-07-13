@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pago</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <header class="navegacion-superior">
+        <button class="boton-atras" onclick="history.back()">←</button>
+        <h1>PAGO</h1>
+    </header>
+
+    <main class="contenedor-pago">
+
+        <section class="resumen-final">
+            <h3 class="titulo-rojo">RESUMEN DE COMPRA</h3>
+            <div class="caja-resumen">
+                <h2 id="pago-titulo">Cargando...</h2>
+                <h2 id="pago-total" class="texto-salmon">$0.00</h2>
+            </div>
+            <div class="detalles-resumen">
+                <p>Fecha y Hora <span id="pago-fecha-hora">...</span></p>
+                <p>Asientos <span id="pago-asientos">...</span></p>
+                <p>Sala <span>Sala 04 • DIGITAL</span></p>
+            </div>
+        </section>
+
+        <section class="formulario-datos">
+            <h3 class="titulo-rojo">DATOS DE FACTURACIÓN</h3>
+
+            <form id="formulario-pago">
+                <div class="grupo-input">
+                    <label>NOMBRE COMPLETO</label>
+                    <input type="text" id="nombreCliente" placeholder="Ej: Rodrigo Barboza" required>
+                </div>
+
+                <div class="grupo-input">
+                    <label>CORREO ELECTRÓNICO</label>
+                    <input type="email" id="correoCliente" placeholder="rodrigo@correo.com" required>
+                </div>
+
+                <div class="grupo-input">
+                    <label>NÚMERO DE TARJETA (Simulado)</label>
+                    <input type="text" placeholder="0000 0000 0000 0000" required>
+                </div>
+
+                <div class="fila-inputs">
+                    <div class="grupo-input mitad">
+                        <label>VENCIMIENTO</label>
+                        <input type="text" placeholder="MM/AA" required>
+                    </div>
+                    <div class="grupo-input mitad">
+                        <label>CVC</label>
+                        <input type="password" placeholder="***" required>
+                    </div>
+                </div>
+
+                <p class="terminos">Al confirmar su compra, acepta nuestros Términos de Servicio. Todas las ventas son
+                    definitivas.</p>
+
+                <button type="submit" class="boton-rojo-gigante" style="margin-top: 20px;">
+                    CONFIRMAR COMPRA
+                </button>
+            </form>
+        </section>
+    </main>
+
+    <script src="js/pago.js"></script>
+</body>
+
+</html>
